@@ -1,28 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <resume :data="data" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Resume from "@/Resume.vue";
+import data from "./data.json";
 
 export default {
-  name: "app",
-  components: {
-    HelloWorld
-  }
+  data: function() {
+    return { data };
+  },
+  components: { Resume }
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+body {
+  // Display resume in center of screen.
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // Configure spacing.
+  margin: 0;
+  padding: 20px;
+
+  // Configure default fonts.
+  font-size: 12px;
+  font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  // prettier-ignore
+  p, h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+  }
+
+  background-color: lightgrey;
 }
 </style>

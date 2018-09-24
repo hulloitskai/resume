@@ -1,6 +1,6 @@
 {
   "name": "vue-resume",
-  "description": "A resume made with VueJS (for better maintainability).",
+  "description": "A resume written in Vue.",
   "version": "0.1.0",
   "author": "Steven Xie <hello@stevenxie.me>",
   "repository": "https://github.com/steven-xie/vue-resume",
@@ -8,23 +8,23 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "gh-pages -d dist/",
+    "produce": "GH_PAGES=true yarn build && yarn deploy"
   },
   "dependencies": {
-    "vue": "^2.5.17",
-    "vuex": "^3.0.1"
+    "lodash": "^4.17.11",
+    "vue": "^2.5.17"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
     "@vue/cli-plugin-babel": "^3.0.3",
     "@vue/cli-plugin-eslint": "^3.0.3",
     "@vue/cli-service": "^3.0.3",
     "@vue/eslint-config-prettier": "^3.0.3",
-    "eslint": "^5.6.0",
+    "gh-pages": "^2.0.0",
     "git-hooks": "^1.1.10",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.17",
-    "webpack": "4.0.0"
+    "vue-template-compiler": "^2.5.17"
   }
 }

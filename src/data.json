@@ -1,0 +1,41 @@
+{
+  "name": "Steven Xie",
+  "blurb": "I study CS at the University of Waterloo, and I aim to build things that matter.",
+  "links": [
+    { "title": "hello@stevenxie.me", "url": "mailto:hello@stevenxie.me" },
+    {
+      "title": "github.com/steven-xie",
+      "url": "https://github.com/steven-xie"
+    },
+    {
+      "title": "linkedin.com/in/steven-s-xie",
+      "url": "https://www.linkedin.com/in/steven-s-xie"
+    }
+  ],
+  "experiences": [
+    {
+      "title": "Full-stack Developer @ ConsenSys",
+      "timestamp": "April 2018 -> August 2018",
+      "points": [
+        "Developed a web app that did some stuff?????",
+        "ate lots of content"
+      ]
+    },
+    {
+      "title": "iOS App Developer @ Evichat Inc.",
+      "timestamp": "August 2017 -> September 2017",
+      "points": [
+        "Designed and programmed Evichat's primary iOS client app in [[Swift 3]], which acted as the client entrypoint for Evichat's services",
+        "Implemented [[OAuth 1.0 and 2.0]] auth flows to integrate with social services like Gmail, Twitter, and Instagram.",
+        "Worked with [[CocoaPods]] to modularize the app into easy-to-maintain networking and UI components, which streamlined the development process."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "name": "University of Waterloo",
+      "blurb": "Candidate for a Bachelor's of Computer Science (BCS).",
+      "timestamp": "2017 -> 2022"
+    }
+  ]
+}
