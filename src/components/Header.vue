@@ -6,15 +6,15 @@
     </div>
     <div class="panel spacer" />
     <div class="panel right">
-      <a
+      <p
         class="link" target="_blank" rel="noopener noreferrer"
         v-for="(link, index) in links"
-        :href="link.url" :key="link.url"
+        :key="link.url"
       >
-        <p :style="{ color: generateLinkColor(index) }">
+        <a :href="link.url" :style="{ color: generateLinkColor(index) }">
           {{ link.title }}
-        </p>
-      </a>
+        </a>
+      </p>
     </div>
   </div>
 </template>
@@ -74,13 +74,12 @@ div.panel {
   }
 }
 
-a.link {
+p.link {
+  margin-bottom: 4px;
   color: inherit;
-  text-decoration: none;
+  font-size: 17px;
 
-  p {
-    margin-bottom: 4px;
-    font-size: 17px;
-  }
+  // prettier-ignore
+  a { text-decoration: none; }
 }
 </style>
