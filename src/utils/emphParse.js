@@ -5,7 +5,7 @@
  * @param text {string}
  * @returns {string}
  */
-function emphParse(text) {
+export default function emphParse(text) {
   let searchPos = 0;
   let openIndex = text.indexOf("[[", searchPos);
 
@@ -27,5 +27,3 @@ function emphParse(text) {
 
   return text;
 }
-
-export default emphParse;
