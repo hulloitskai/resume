@@ -17,7 +17,7 @@ export default {
 h2.title {
   margin-bottom: 7px;
 
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
   color: #7b8bdb;
 }

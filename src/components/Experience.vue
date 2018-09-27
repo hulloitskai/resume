@@ -37,22 +37,22 @@ h3, h4 { font-family: "Fira Code", "Courier New", Courier, monospace; }
 h3.title {
   color: #585858;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 h4.timestamp {
   color: #919191;
   font-weight: 500;
-  font-size: 11.5px;
+  font-size: 15px;
   font-style: oblique;
 }
 
 ul.points {
-  margin: 5px 0 15px 0;
-  padding-left: 16px;
+  margin: 7px 0 20px 0;
+  padding-left: 20px;
 
   color: #5c5c5c;
-  font-size: 11.5px;
+  font-size: 15.5px;
 
   li {
     margin-bottom: 5px;
@@ -64,8 +64,8 @@ ul.points {
       span.emphasis {
         $emphcol: rgb(70, 70, 70);
         color: $emphcol;
-        text-shadow: 0.4px 0 0 $emphcol;
-        letter-spacing: 0.4px;
+        text-shadow: 0.6px 0 0 $emphcol;
+        letter-spacing: 0.6px;
       }
     }
 

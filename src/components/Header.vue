@@ -37,15 +37,13 @@ export default {
 
 <style lang="scss" scoped>
 div.header {
-  height: 130px;
+  height: 175px;
   display: flex;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 50px;
 
   background-color: #f6f6f6;
   color: #7e7e7e;
-
-  font-size: 12px;
 }
 
 h1.name {
@@ -53,7 +51,7 @@ h1.name {
 
   color: #5d5d5d;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 33px;
 }
 
 p.blurb {
@@ -62,15 +60,15 @@ p.blurb {
 
 div.panel {
   // prettier-ignore
-  &.left { width: 250px; }
+  &.left { width: 330px; }
 
   // prettier-ignore
   &.spacer { flex: 1; }
 
   &.right {
-    width: 190px;
+    width: 250px;
     position: relative; // makes it feel more "balanced" with left side
-    top: 5px;
+    top: 7px;
 
     text-align: right;
   }
@@ -82,7 +80,7 @@ a.link {
 
   p {
     margin-bottom: 4px;
-    font-size: 12.5px;
+    font-size: 17px;
   }
 }
 </style>

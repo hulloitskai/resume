@@ -33,8 +33,8 @@ export default {
 
 <style lang="scss" scoped>
 div.resume {
-  width: 612px;
-  height: 792px;
+  width: 8.5in;
+  height: 11in;
   display: flex;
   flex-direction: column;
 
@@ -48,6 +48,15 @@ div.content {
 
 div.column {
   flex: 1;
-  padding: 40px 10px 40px 40px;
+  padding: 50px;
+  padding-top: 40px;
+
+  &.left {
+    padding-right: 20px;
+  }
+
+  &.right {
+    padding-left: 20px;
+  }
 }
 </style>

@@ -25,10 +25,9 @@ body {
 
   // Configure spacing.
   margin: 0;
-  padding: 20px;
 
   // Configure default fonts.
-  font-size: 12px;
+  font-size: 16px;
   font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,6 +37,6 @@ body {
     padding: 0;
   }
 
-  background-color: lightgrey;
+  background-color: darkgrey;
 }
 </style>
