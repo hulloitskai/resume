@@ -6,7 +6,7 @@
   "repository": "https://github.com/steven-xie/vue-resume",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "deploy": "gh-pages -d dist/ -b static",

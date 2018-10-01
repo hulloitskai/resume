@@ -18,10 +18,7 @@ export default {
   props: { data: Array },
   computed: {
     points: function() {
-      return this.data.map(({ points }) => {
-        const newPoints = points.map(emphParse);
-        return newPoints;
-      });
+      return this.data.map(({ points }) => points.map(emphParse));
     }
   },
   components: { "resume-section": Section }
@@ -49,7 +46,7 @@ ul.points {
   margin: 7px 0 20px 0;
   padding-left: 20px;
 
-  color: #5c5c5c;
+  color: #5e5e5e;
   font-size: 15.5px;
 
   li {
@@ -59,12 +56,8 @@ ul.points {
     /deep/ p {
       display: inline;
 
-      span.emphasis {
-        $emphcol: rgb(70, 70, 70);
-        color: $emphcol;
-        text-shadow: 0.6px 0 0 $emphcol;
-        letter-spacing: 0.6px;
-      }
+      // prettier-ignore
+      span.emphasis { color: rgb(0, 0, 0); }
     }
 
     &::before {
