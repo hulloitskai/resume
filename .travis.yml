@@ -15,6 +15,7 @@ env:
     - DOCKER_USER=stevenxie
     - PATH=/opt/bin:$PATH
     - secure: "Bn88rSULe5SlRxizJvbmm6eQI/jHlUbgFld/B/yRBB/6R6+y8sH8C5QtPteikvhz7xtoSBMvuSq3TzSEDdW5tfWMQ7jxFJshBEk5MRLFFir+n6YJwC6ea7yPdmYQeeYAc/GWU5QS7AWvKf96cffOQ4vZ4ARSoXdPnYibCU+NXAMrXB7ZlKAzAvy8he0Br5oAN9r4oYV3cXucpaOhXDL4pNfUvvdYg0IgifqRkqNOcdlnAMB9ZiPW4xzZ8kzqr5NrklVKzdAFBDMeaqWv7Cva3KLN+Jl5SuuadKGcPoTNMsUjc6VPQ+2pRYPdOYEyXX95qYBmnVBjZt3+5vx/IyFoiGMH8pP4l9/eCAt/0Zk1zw/gsahjKeId5y1nHrfBZa0CLbFNLzMcyqAtiYeeOp36QsuxkNyLaL0cjDaY6csPC7rXDe3BGLgoHFepf22Md1K4TJEC4V9LWULbMAo5MAbIQPgtAQbyimPkam7RAL0cY3J9lOV9WuNd3yEp7smjR5KngEUS6V2ErOFnmVLZrCvVtO0QNFFxpVINbi8YM8C80DuyJs4K80kQ09xuruKl+mS8v58sMNuIINNyuVmBDYUSO1gu/i3/+pd8iZLvLj6grWjvoUXjVsI6mHt6/yZKC6Uj3SyNk3oJ8Ilds7b1M5hesTsr/YaAlndXXL7EB61vWyM="
+    - secure: "VFeUgv05dXqhDuL8ldjUDMceVD0DNFINU6fMMb30GBWL06o91dXmvzEsybKYXv3WbEAyKW1q5YwFNsKCd6c3qUch9IAOjl92ALkRAIuv996oaiBDGVQFLDpt6mOi2cg6luhMt2acyU+FzYALPepS2PRy+MIOHCQCveCKEOh3xovdMXC9p8bWB4ZTHUMpqpKTpM3n+EaRK/KAcDYAJYsf4dew5GSnMkSmP0LOce2xUHZsHM2Zu0R7dKVqKMkATi7g+sqOwlNjwp1800Dkb/pwLZ7nUHT+68Tkl4mMTmUlvgzRAB0xhYco88Q05wHEgIA/hEquTOPXb+qBXwy2O6hPVMBMhFQZZIifMfac92cNWIjFwXJH78oMCNl2TL+ALxNSh1KONNI8UfezrHTSVrA+JSGs8fvdT315XZ/6ThY989kb4Ea0+o2zS/W40Pa10P3GH2Xb2eDSniXg/30tV+LtTlovWoyPzdJ2pls+qMfJGRGaYvCUNunqTCXARsghjkScezb7cQetStVqyvkuLF3yfykyTu3iUWpYw9gdTNMDxVMEl7xMnmxuj/ixz6tqKQKVZZ520uKASIkVoWE1mmDq2sO/sj4xo6Dcv9IERbd6z5wj6fHV9uLv61ePD0uqa2wyjatlMDiVMfP4EV0EgpHdF33Zv/iVJnV0Enbyck4e46k="
 
 before_install:
   - echo "/opt/bin:" && ls -l /opt/bin
@@ -45,11 +46,20 @@ script:
     if ! (./scripts/healthcheck.sh && docker-compose down); then exit -1; fi
 
 deploy:
-  provider: script
-  script: ./scripts/deploy.sh
-  skip_cleanup: true
-  on:
-    all_branches: true
+  ## Deploy images to Docker Hub.
+  - provider: script
+    script: ./scripts/deploy.sh
+    skip-cleanup: true
+    on:
+      all_branches: true
+  ## Deploy to Github Pages.
+  - provider: pages
+    skip-cleanup: true
+    keep-history: true
+    github-token: $GH_TOKEN
+    on:
+      branch: master
+
 
 after_deploy:
     ## Build "builder" stage.
