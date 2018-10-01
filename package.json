@@ -12,7 +12,22 @@
     "deploy": "gh-pages -d dist/ -b static",
     "produce": "yarn build && yarn deploy",
     "deploy-gh": "gh-pages -d dist/",
-    "produce-gh": "GH_PAGES=true yarn build && yarn deploy-gh"
+    "produce-gh": "GH_PAGES=true yarn build && yarn deploy-gh",
+    "up": "docker-compose up -d",
+    "down": "docker-compose down",
+    "logs": "docker-compose logs -f",
+    "up-logs": "yarn up && yarn logs"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{vue,js,css,scss}": [
+      "yarn lint",
+      "git add"
+    ]
   },
   "dependencies": {
     "lodash": "^4.17.11",
@@ -24,7 +39,8 @@
     "@vue/cli-service": "^3.0.3",
     "@vue/eslint-config-prettier": "^3.0.3",
     "gh-pages": "^2.0.0",
-    "git-hooks": "^1.1.10",
+    "husky": "^1.0.1",
+    "lint-staged": "^7.3.0",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.17"

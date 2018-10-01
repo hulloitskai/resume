@@ -19,9 +19,7 @@ export default {
   computed: {
     points: function() {
       return this.data.map(({ points }) => {
-        console.log("points", points);
         const newPoints = points.map(emphParse);
-        console.log("newPoints", newPoints);
         return newPoints;
       });
     }

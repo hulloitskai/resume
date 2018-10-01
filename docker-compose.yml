@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  resume:
+    image: stevenxie/vue-resume:latest
+    build:
+      context: .
+      cache_from:
+        - sebp/lighttpd:latest
+        - stevenxie/vue-resume:builder
+        - stevenxie/vue-resume:latest
+      target: production
+    container_name: resume
+    ports:
+      - "3000:80"
