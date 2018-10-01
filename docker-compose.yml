@@ -6,9 +6,10 @@ services:
     build:
       context: .
       cache_from:
-        - sebp/lighttpd:latest
-        - stevenxie/vue-resume:builder
         - stevenxie/vue-resume:latest
+        - stevenxie/junior:latest
+        - stevenxie/vue-resume:builder
+        - node:10.11-alpine
       target: production
     container_name: resume
     ports:

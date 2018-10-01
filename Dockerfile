@@ -15,7 +15,7 @@ RUN yarn build
 ######################
 ## PRODUCTION IMAGE
 ######################
-FROM sebp/lighttpd:latest AS production
+FROM stevenxie/junior:latest AS production
 
 ## Labels:
 LABEL maintainer="Steven Xie <hello@stevenxie.me>"
@@ -24,18 +24,12 @@ LABEL org.label-schema.name = "vue-resume"
 LABEL org.label-schema.vcs-url="https://github.com/steven-xie/vue-resume"
 LABEL org.label-schema.vendor="Steven Xie <hello@stevenxie.me>"
 
-## Install dependencies:
-RUN apk update && apk add --no-cache wget
-
 ## Copy built application and package metadata.
-WORKDIR /var/www/localhost/htdocs/resume
+WORKDIR /www/resume/
 COPY --from=builder /build/dist/ ./
 
-## Define healthcheck.
-ENV ENDPOINT=http://0.0.0.0/resume/
-COPY scripts/healthcheck.sh /etc/healthcheck.sh
-HEALTHCHECK --interval=30s --timeout=30s --start-period=15s --retries=1 \
-  CMD sh /etc/healthcheck.sh
+## Configure environment, define healthcheck endpoint:
+ENV PORT=80 TRAILING_SLASH=false ENDPOINT=http://0.0.0.0/resume
 
-## Expose port.
-EXPOSE 80
+## Expose default port.
+EXPOSE $PORT

@@ -31,8 +31,8 @@ before_install:
   - docker-compose version
 
 install:
-  - docker pull stevenxie/vue-resume:latest
-  - docker pull stevenxie/vue-resume:builder
+  - docker pull $DOCKER_USER/$REPO_NAME:latest
+  - docker pull $DOCKER_USER/$REPO_NAME:builder
   - docker-compose build
 
 script:
@@ -63,6 +63,6 @@ deploy:
 
 after_deploy:
     ## Build "builder" stage.
-  - docker build --target=builder -t ${DOCKER_USER}/${REPO_NAME} .
+  - docker build --target=builder -t ${DOCKER_USER}/${REPO_NAME}:builder .
     ## Push "builder" stage.
   - docker push ${DOCKER_USER}/${REPO_NAME}:builder
