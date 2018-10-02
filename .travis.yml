@@ -1,68 +1,30 @@
-services: docker
+language: node_js
+node_js: "10"
 
 git:
   depth: 3
 
-cache:
-  directories:
-    - /opt/bin
-
 env:
   global:
-    - REPO_NAME=vue-resume
-    - RELEASE_BRANCH=master
-    - DOCKER_COMPOSE_VERSION=1.22.0
-    - DOCKER_USER=stevenxie
-    - PATH=/opt/bin:$PATH
-    - secure: "Bn88rSULe5SlRxizJvbmm6eQI/jHlUbgFld/B/yRBB/6R6+y8sH8C5QtPteikvhz7xtoSBMvuSq3TzSEDdW5tfWMQ7jxFJshBEk5MRLFFir+n6YJwC6ea7yPdmYQeeYAc/GWU5QS7AWvKf96cffOQ4vZ4ARSoXdPnYibCU+NXAMrXB7ZlKAzAvy8he0Br5oAN9r4oYV3cXucpaOhXDL4pNfUvvdYg0IgifqRkqNOcdlnAMB9ZiPW4xzZ8kzqr5NrklVKzdAFBDMeaqWv7Cva3KLN+Jl5SuuadKGcPoTNMsUjc6VPQ+2pRYPdOYEyXX95qYBmnVBjZt3+5vx/IyFoiGMH8pP4l9/eCAt/0Zk1zw/gsahjKeId5y1nHrfBZa0CLbFNLzMcyqAtiYeeOp36QsuxkNyLaL0cjDaY6csPC7rXDe3BGLgoHFepf22Md1K4TJEC4V9LWULbMAo5MAbIQPgtAQbyimPkam7RAL0cY3J9lOV9WuNd3yEp7smjR5KngEUS6V2ErOFnmVLZrCvVtO0QNFFxpVINbi8YM8C80DuyJs4K80kQ09xuruKl+mS8v58sMNuIINNyuVmBDYUSO1gu/i3/+pd8iZLvLj6grWjvoUXjVsI6mHt6/yZKC6Uj3SyNk3oJ8Ilds7b1M5hesTsr/YaAlndXXL7EB61vWyM="
-    - secure: "VFeUgv05dXqhDuL8ldjUDMceVD0DNFINU6fMMb30GBWL06o91dXmvzEsybKYXv3WbEAyKW1q5YwFNsKCd6c3qUch9IAOjl92ALkRAIuv996oaiBDGVQFLDpt6mOi2cg6luhMt2acyU+FzYALPepS2PRy+MIOHCQCveCKEOh3xovdMXC9p8bWB4ZTHUMpqpKTpM3n+EaRK/KAcDYAJYsf4dew5GSnMkSmP0LOce2xUHZsHM2Zu0R7dKVqKMkATi7g+sqOwlNjwp1800Dkb/pwLZ7nUHT+68Tkl4mMTmUlvgzRAB0xhYco88Q05wHEgIA/hEquTOPXb+qBXwy2O6hPVMBMhFQZZIifMfac92cNWIjFwXJH78oMCNl2TL+ALxNSh1KONNI8UfezrHTSVrA+JSGs8fvdT315XZ/6ThY989kb4Ea0+o2zS/W40Pa10P3GH2Xb2eDSniXg/30tV+LtTlovWoyPzdJ2pls+qMfJGRGaYvCUNunqTCXARsghjkScezb7cQetStVqyvkuLF3yfykyTu3iUWpYw9gdTNMDxVMEl7xMnmxuj/ixz6tqKQKVZZ520uKASIkVoWE1mmDq2sO/sj4xo6Dcv9IERbd6z5wj6fHV9uLv61ePD0uqa2wyjatlMDiVMfP4EV0EgpHdF33Zv/iVJnV0Enbyck4e46k="
+    - secure: "GaHBYQ2Iof00MoFtYrS+8r0nOuH38V8sDu2xWHAkIrhycD6gOj19cdPLfh7xQyus6sMHw2SNF/dJY9RNaKayr3GbSeb7V4SEOBndBBtNwnf3vz8dbMYeWNhOfg0+gRtTSKt/Fmjs5/0DQFb5+06GvWELGmJ+YuJnfxhMZyq1eDJXUdGbTxoFiqi+o+wUF8ztQbgWkuk75UBnPfcwx+66jbqemCsCJFh4tzzSnkopwIxjHchJrXHWOKHo6kXkNWeIEAlI/LNCdp0HAwXIqa0FqgHPlqiaD9n2Ne7GXuzXx2VMEJQf/wK4dx8KsgVJMoxU95s4pu+gtXpuobymqayW2q99ZcYxVDBHd1Jh4QEw/VbpBVUuWMB92hTMlYzdQvsx+YpBg7rlov2+MfJkjHdm5DSuO/9X+GGujs/n9GweonO4TCO7ZNYg6Q4oQdZfeHlsyEM17bIHMbfvUarRDd3dXyOMG2LGtNT5g6DnOeLvsYwzfZ14XuoOOsKR7WGyVHtZradCYIwKSYNWF9IBVdOVPCMl9A95OXodtvVKQ/6tRmEHtZo2gjRJf4+VuidnWQ4sO4tF2Vd6lNRFOTg8FhV6OwKBJx3ZTL5g/ccF6cb0lHGIPKW6P9odbEIxTKQFGSdZe1AQ4IC0hwKa5B2EiwdChKRhkE/V15MAP5Fp3Ji6rBI="
 
-before_install:
-  - echo "/opt/bin:" && ls -l /opt/bin
-  - |
-    if [ ! -x /opt/bin/docker-compose ]; then
-      echo "Installing docker-compose:"
-      curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
-      chmod +x docker-compose
-      mv docker-compose /opt/bin/
+cache:
+  yarn: true
+  directories:
+    - node_modules
 
-      echo "/opt/bin:" && ls -l /opt/bin
-    fi
-  - docker-compose version
+## Install dependencies.
+install: yarn install
 
-install:
-  - docker pull $DOCKER_USER/$REPO_NAME:latest
-  - docker pull $DOCKER_USER/$REPO_NAME:builder
-  - docker-compose build
+## Run build script.
+script: yarn build
 
-script:
-  ## Bring image online.
-  - docker-compose up -d && sleep 15
-  - |
-    ## Set environment variables for healthcheck.
-    export ENDPOINT=localhost:3000/resume/
-
-    ## Return success only if both healthcheck and image unload was successful.
-    if ! (./scripts/healthcheck.sh && docker-compose down); then exit -1; fi
-
+## Deploy to branch "static".
 deploy:
-  ## Deploy images to Docker Hub.
-  - provider: script
-    script: ./scripts/deploy.sh
-    skip-cleanup: true
-    on:
-      all_branches: true
-  ## Deploy to Github Pages.
-  - provider: pages
-    skip-cleanup: true
-    keep-history: true
-    github-token: $GH_TOKEN
-    on:
-      branch: master
-
-
-after_deploy:
-    ## Build "builder" stage.
-  - docker build --target=builder -t ${DOCKER_USER}/${REPO_NAME}:builder .
-    ## Push "builder" stage.
-  - docker push ${DOCKER_USER}/${REPO_NAME}:builder
+  provider: pages
+  skip-cleanup: true
+  local-dir: ./dist/
+  target-branch: static
+  github-token: $GH_TOKEN
+  on:
+    branch: master

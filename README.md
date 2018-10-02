@@ -1,10 +1,8 @@
 # vue-resume
 
-_A resume written in Vue. See it live at https://stevenxie.me/resume_
+_A resume written in Vue._
 
 [![Travis CI][travis-img]][travis]
-[![Docker Hub][docker-img]][docker]
-[![MicroBadger][microbadger-img]][microbadger]
 
 ## Project setup
 
