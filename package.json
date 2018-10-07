@@ -3,7 +3,7 @@
   "description": "A resume written in Vue.",
   "version": "0.1.0",
   "author": "Steven Xie <hello@stevenxie.me>",
-  "repository": "https://github.com/steven-xie/vue-resume",
+  "repository": "https://github.com/stevenxie/vue-resume",
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
