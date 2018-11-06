@@ -1,0 +1,100 @@
+{
+  "name": "Steven Xie",
+  "blurb": "I study CS at the University of Waterloo, and I aim to build things that matter.",
+  "links": [
+    { "title": "hello@stevenxie.me", "url": "mailto:hello@stevenxie.me" },
+    { "title": "github.com/stevenxie", "url": "https://github.com/stevenxie" },
+    {
+      "title": "linkedin.com/in/steven-s-xie",
+      "url": "https://www.linkedin.com/in/steven-s-xie"
+    }
+  ],
+  "experiences": [
+    {
+      "title": "Full-stack Developer @ ConsenSys",
+      "timestamp": "April 2018 -> August 2018",
+      "points": [
+        "Developed a team management webapp using [[React]], [[MongoDB]], and [[Neo4J]], which aims to support the operation of decentralized organizations like ConsenSys.",
+        "Gained experience with solving problems related to relationship-focused data using [[graph databases]], and architecting scalable data-heavy applications using [[Redux]] and [[websockets]].",
+        "Gained experience working in a fast-paced startup environment, and learned about the importance of constant feedback when working in a team."
+      ]
+    },
+    {
+      "title": "iOS App Developer @ Evichat Inc.",
+      "timestamp": "August 2017 -> September 2017",
+      "points": [
+        "Designed and programmed Evichat's primary iOS client app in [[Swift 3]], which acted as the client entrypoint for Evichat's services",
+        "Implemented [[OAuth 1.0 and 2.0]] auth flows to integrate with social services like Gmail, Twitter, and Instagram.",
+        "Worked with [[CocoaPods]] to modularize the app into easy-to-maintain networking and UI components, which streamlined the development process."
+      ]
+    },
+    {
+      "title": "Software Developer @ buildABILITY",
+      "timestamp": "July 2017 -> August 2017",
+      "points": [
+        "Created a cross-platform automated certificate creator and sender using [[Electron]] and [[Node.js]] to automate a manual pdf-creation and emailing procedure.",
+        "Reduced a [[90-minute]] manual procedure into a [[30-second]] automated one (per batch of 100 clients), dramatically increasing operational efficiency.",
+        "Integrated with external APIs to read and write to CSVs, produce and rasterize PDFs, and send emails."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "express-starter",
+      "link": {
+        "title": "github.com/stevenxie/express-starter",
+        "url": "https://github.com/stevenxie/express-starter"
+      },
+      "points": [
+        "Developed a starter kit for [[Express]], [[Typescript]], and [[Docker]] in order to bootstrap web app development for myself and for friends wanting to start their own web development projects, but who were struggling with the setup.",
+        "The starter kit is fully documented, with beginner-friendly explanations on how Express routes are configured, and how to configure the Docker container build process."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "name": "University of Waterloo",
+      "blurb": "Candidate for a Bachelor's of Computer Science (BCS).",
+      "timestamp": "2017 -> 2022"
+    }
+  ],
+  "skills": {
+    "languages": [
+      "Javascript",
+      "Go",
+      "Java",
+      "Swift",
+      "Scala",
+      "Racket (Lisp)",
+      "Bash",
+      "C",
+      "C++",
+      "Python",
+      "Rust"
+    ],
+    "libraries": ["React", "React Native", "Express", "Vue"],
+    "technologies": [
+      "Docker",
+      "Docker Swarm",
+      "Git",
+      "Postman",
+      "Terraform",
+      "Node",
+      "Electron",
+      "SQL (Postgres)",
+      "Neo4J (Graph DB)",
+      "MongoDB",
+      "Maven"
+    ]
+  },
+  "awards": [
+    {
+      "title": "Hack4Health Third Place Winner",
+      "timestamp": "11/2017",
+      "points": [
+        "Worked with a team to design and pitch Pilot, a cross-platform todo-based personal assistant with a simple interface, designed specifically to help people with dementia.",
+        "Designed a dementia-friendly interface on [[Sketch]], and prototyped with [[React Native]] and [[Expo]]."
+      ]
+    }
+  ]
+}
