@@ -1,8 +1,29 @@
-# vue-resume
+# resume
 
-_A resume written in Vue._
+_My resume, written in Vue._
 
 [![Travis CI][travis-img]][travis]
+
+> GitHub Pages version: https://stevenxie.github.io/resume
+
+## Motivation
+
+I initially built my resume using Sketch, a tool for vector illustrations and
+UI design. This method produced really nice-looking results, but it was
+difficult to maintain because of inconsistencies with the spacing of elements.
+
+Because of this, I decided to rebuild by resume using a web framework (VueJS)
+and modular components in order to maintain consistency in style and spacing,
+and for ease of modifications; all the data for the resume can now be
+represented as a single JSON object, and since the webapp only specifies the
+layout of the resume, updating the JSON object will update the contents of
+the resume.
+
+## TODOs
+
+- [ ] Finish initial version.
+- [ ] Integrate with dynamic data from the https://stevenxie.me API, for truly
+      automated updates.
 
 ## Project setup
 
@@ -13,9 +34,5 @@ yarn run build # compiles and minifies for production
 yarn run lint  # lints and fixes files
 ```
 
-[travis]: https://travis-ci.com/steven-xie/vue-resume
-[travis-img]: https://travis-ci.com/steven-xie/vue-resume.svg?branch=master
-[microbadger]: https://microbadger.com/images/stevenxie/vue-resume
-[microbadger-img]: https://images.microbadger.com/badges/image/stevenxie/vue-resume.svg
-[docker]: https:/.docker.com/r/stevenxie/vue-resume/
-[docker-img]: https://img.shields.io/docker/pulls/stevenxie/vue-resume.svg
+[travis]: https://travis-ci.com/stevenxie/resume
+[travis-img]: https://travis-ci.com/stevenxie/resume.svg?branch=master

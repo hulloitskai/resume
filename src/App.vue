@@ -8,6 +8,8 @@
 import Resume from "@/Resume.vue";
 import data from "./data.json";
 
+// App contains global styling and functions as a wrapper for the Resume
+// component.
 export default {
   data: function() {
     return { data };
@@ -22,21 +24,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  // Configure spacing.
   margin: 0;
+  background-color: darkgrey;
 
-  // Configure default fonts.
+  // Configure default font styling.
   font-size: 16px;
   font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  // Normalize spacing around text.
   // prettier-ignore
   p, h1, h2, h3, h4, h5 {
     margin: 0;
     padding: 0;
   }
-
-  background-color: darkgrey;
 }
 </style>

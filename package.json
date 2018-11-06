@@ -12,11 +12,7 @@
     "deploy": "gh-pages -d dist/ -b static",
     "produce": "yarn build && yarn deploy",
     "deploy-gh": "gh-pages -d dist/",
-    "produce-gh": "GH_PAGES=true yarn build && yarn deploy-gh",
-    "up": "docker-compose up -d",
-    "down": "docker-compose down",
-    "logs": "docker-compose logs -f",
-    "up-logs": "yarn up && yarn logs"
+    "produce-gh": "GH_PAGES=true yarn build && yarn deploy-gh"
   },
   "husky": {
     "hooks": {

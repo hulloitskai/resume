@@ -3,10 +3,7 @@
   "blurb": "I study CS at the University of Waterloo, and I aim to build things that matter.",
   "links": [
     { "title": "hello@stevenxie.me", "url": "mailto:hello@stevenxie.me" },
-    {
-      "title": "github.com/stevenxie",
-      "url": "https://github.com/stevenxie"
-    },
+    { "title": "github.com/stevenxie", "url": "https://github.com/stevenxie" },
     {
       "title": "linkedin.com/in/steven-s-xie",
       "url": "https://www.linkedin.com/in/steven-s-xie"
@@ -17,8 +14,9 @@
       "title": "Full-stack Developer @ ConsenSys",
       "timestamp": "April 2018 -> August 2018",
       "points": [
-        "Developed a web app that did some stuff?????",
-        "ate lots of content"
+        "Developed a team management webapp using [[React]], [[MongoDB]], and [[Neo4J]], which aims to support the operation of decentralized organizations like ConsenSys.",
+        "Gained experience with solving problems related to relationship-focused data using [[graph databases]], and architecting scalable data-heavy applications using [[Redux]] and [[websockets]].",
+        "Gained experience working in a fast-paced startup environment, and learned about the importance of constant feedback when working in a team."
       ]
     },
     {
@@ -28,6 +26,15 @@
         "Designed and programmed Evichat's primary iOS client app in [[Swift 3]], which acted as the client entrypoint for Evichat's services",
         "Implemented [[OAuth 1.0 and 2.0]] auth flows to integrate with social services like Gmail, Twitter, and Instagram.",
         "Worked with [[CocoaPods]] to modularize the app into easy-to-maintain networking and UI components, which streamlined the development process."
+      ]
+    },
+    {
+      "title": "Software Developer @ buildABILITY",
+      "timestamp": "July 2017 -> August 2017",
+      "points": [
+        "Created a cross-platform automated certificate creator and sender using [[Electron]] and [[Node.js]] to automate a manual pdf-creation and emailing procedure.",
+        "Reduced a [[90-minute]] manual procedure into a [[30-second]] automated one (per batch of 100 clients), dramatically increasing operational efficiency.",
+        "Integrated with external APIs to read and write to CSVs, produce and rasterize PDFs, and send emails."
       ]
     }
   ],

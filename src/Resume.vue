@@ -47,15 +47,16 @@ div.content {
 }
 
 div.column {
-  flex: 1;
   padding: 50px;
   padding-top: 40px;
 
   &.left {
+    flex: 5;
     padding-right: 20px;
   }
 
   &.right {
+    flex: 3;
     padding-left: 20px;
   }
 }

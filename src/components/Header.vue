@@ -24,7 +24,7 @@ export default {
   props: { name: String, blurb: String, links: Array },
   data: function() {
     return {
-      linkColors: ["#1BCA7A", "#56A1F7", "#D28EEE"]
+      linkColors: ["#18bc72", "#56A1F7", "#D28EEE"]
     };
   },
   methods: {
@@ -37,12 +37,12 @@ export default {
 
 <style lang="scss" scoped>
 div.header {
-  height: 175px;
+  height: 170px;
   display: flex;
   align-items: center;
   padding: 0 50px;
 
-  background-color: #f6f6f6;
+  background-color: #f5f5f5;
   color: #7e7e7e;
 }
 
@@ -77,7 +77,7 @@ div.panel {
 p.link {
   margin-bottom: 4px;
   color: inherit;
-  font-size: 17px;
+  font-size: 16px;
 
   // prettier-ignore
   a { text-decoration: none; }
