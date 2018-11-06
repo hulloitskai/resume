@@ -6,7 +6,7 @@ _My resume, written in Vue._
 
 > GitHub Pages: https://stevenxie.github.io/resume/
 >
-> Resume Data: https://stevenxie.github.io/resume/data.json
+> Resume data: https://stevenxie.github.io/resume/data.json
 
 ## Motivation
 

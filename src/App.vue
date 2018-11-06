@@ -7,13 +7,15 @@
 <script>
 import Resume from "@/Resume.vue";
 
+const { BASE_URL: baseURL } = process.env;
+
 // App contains global styling and functions as a wrapper for the Resume
 // component.
 export default {
   data: () => ({ data: {} }),
   // Fetch JSON data upon creation.
   created: function() {
-    fetch("data.json")
+    fetch(`${baseURL}data.json`)
       .then(res => res.json())
       .then(data => (this.data = data));
   },
