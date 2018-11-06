@@ -51,7 +51,7 @@ div.column {
   padding-top: 40px;
 
   &.left {
-    flex: 5;
+    flex: 4;
     padding-right: 20px;
   }
 

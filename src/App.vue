@@ -6,13 +6,16 @@
 
 <script>
 import Resume from "@/Resume.vue";
-import data from "./data.json";
 
 // App contains global styling and functions as a wrapper for the Resume
 // component.
 export default {
-  data: function() {
-    return { data };
+  data: () => ({ data: {} }),
+  // Fetch JSON data upon creation.
+  created: function() {
+    fetch("data.json")
+      .then(res => res.json())
+      .then(data => (this.data = data));
   },
   components: { Resume }
 };

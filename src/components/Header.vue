@@ -21,12 +21,12 @@
 
 <script>
 export default {
-  props: { name: String, blurb: String, links: Array },
-  data: function() {
-    return {
-      linkColors: ["#18bc72", "#56A1F7", "#D28EEE"]
-    };
+  props: {
+    name: { type: String, default: "" },
+    blurb: { type: String, default: "" },
+    links: { type: Array, default: () => [] }
   },
+  data: () => ({ linkColors: ["#18bc72", "#56A1F7", "#D28EEE"] }),
   methods: {
     generateLinkColor: function(index) {
       return this.linkColors[index % 3];
@@ -37,13 +37,13 @@ export default {
 
 <style lang="scss" scoped>
 div.header {
-  height: 170px;
+  height: 160px;
+  padding: 0 50px;
   display: flex;
   align-items: center;
-  padding: 0 50px;
 
   background-color: #f5f5f5;
-  color: #7e7e7e;
+  color: #7a7a7a;
 }
 
 h1.name {
@@ -54,22 +54,19 @@ h1.name {
   font-size: 33px;
 }
 
-p.blurb {
-  line-height: 115%;
-}
+// prettier-ignore
+p.blurb { line-height: 115%; }
 
 div.panel {
   // prettier-ignore
   &.left { width: 330px; }
-
   // prettier-ignore
   &.spacer { flex: 1; }
 
   &.right {
     width: 250px;
-    position: relative; // makes it feel more "balanced" with left side
-    top: 7px;
-
+    position: relative;
+    top: 7px; // makes it feel more "balanced" with left side
     text-align: right;
   }
 }

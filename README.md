@@ -4,7 +4,9 @@ _My resume, written in Vue._
 
 [![Travis CI][travis-img]][travis]
 
-> GitHub Pages version: https://stevenxie.github.io/resume
+> GitHub Pages: https://stevenxie.github.io/resume/
+>
+> Resume Data: https://stevenxie.github.io/resume/data.json
 
 ## Motivation
 

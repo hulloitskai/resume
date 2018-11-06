@@ -38,11 +38,63 @@
       ]
     }
   ],
+  "projects": [
+    {
+      "name": "express-starter",
+      "link": {
+        "title": "github.com/stevenxie/express-starter",
+        "url": "https://github.com/stevenxie/express-starter"
+      },
+      "points": [
+        "Developed a starter kit for [[Express]], [[Typescript]], and [[Docker]] in order to bootstrap web app development for myself and for friends wanting to start their own web development projects, but who were struggling with the setup.",
+        "The starter kit is fully documented, with beginner-friendly explanations on how Express routes are configured, and how to configure the Docker container build process."
+      ]
+    }
+  ],
   "education": [
     {
       "name": "University of Waterloo",
       "blurb": "Candidate for a Bachelor's of Computer Science (BCS).",
       "timestamp": "2017 -> 2022"
+    }
+  ],
+  "skills": {
+    "languages": [
+      "Javascript",
+      "Go",
+      "Java",
+      "Swift",
+      "Scala",
+      "Racket (Lisp)",
+      "Bash",
+      "C",
+      "C++",
+      "Python",
+      "Rust"
+    ],
+    "libraries": ["React", "React Native", "Express", "Vue"],
+    "technologies": [
+      "Docker",
+      "Docker Swarm",
+      "Git",
+      "Postman",
+      "Terraform",
+      "Node",
+      "Electron",
+      "SQL (Postgres)",
+      "Neo4J (Graph DB)",
+      "MongoDB",
+      "Maven"
+    ]
+  },
+  "awards": [
+    {
+      "title": "Hack4Health Third Place Winner",
+      "timestamp": "11/2017",
+      "points": [
+        "Worked with a team to design and pitch Pilot, a cross-platform todo-based personal assistant with a simple interface, designed specifically to help people with dementia.",
+        "Designed a dementia-friendly interface on [[Sketch]], and prototyped with [[React Native]] and [[Expo]]."
+      ]
     }
   ]
 }

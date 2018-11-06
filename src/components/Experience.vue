@@ -15,7 +15,9 @@ import Section from "./Section.vue";
 import emphParse from "@/utils/emphParse.js";
 
 export default {
-  props: { data: Array },
+  props: {
+    data: { type: Array, default: () => [] }
+  },
   computed: {
     points: function() {
       return this.data.map(({ points }) => points.map(emphParse));
@@ -49,7 +51,7 @@ ul.points {
   margin: 7px 0 20px 0;
   padding-left: 20px;
 
-  color: #5e5e5e;
+  color: #4f4f4f;
   font-size: 15.5px;
 
   li {

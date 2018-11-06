@@ -15,7 +15,9 @@ import Section from "./Section.vue";
 import emphParse from "@/utils/emphParse.js";
 
 export default {
-  props: { data: Array },
+  props: {
+    data: { type: Array, default: () => [] }
+  },
   computed: {
     points: function() {
       return this.data.map(({ points }) => points.map(emphParse));
