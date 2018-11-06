@@ -34,5 +34,5 @@ yarn run build # compiles and minifies for production
 yarn run lint  # lints and fixes files
 ```
 
-[travis]: https://travis-ci.com/stevenxie/resume
-[travis-img]: https://travis-ci.com/stevenxie/resume.svg?branch=master
+[travis]: https://travis-ci.com/stevenxie/vue-resume
+[travis-img]: https://travis-ci.com/stevenxie/vue-resume.svg?branch=master

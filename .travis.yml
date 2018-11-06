@@ -21,10 +21,18 @@ script: yarn build
 
 ## Deploy to branch "static".
 deploy:
-  provider: pages
-  skip-cleanup: true
-  local-dir: ./dist/
-  target-branch: static
-  github-token: $GH_TOKEN
-  on:
-    branch: master
+  - provider: pages
+    skip-cleanup: true
+    local-dir: ./dist/
+    target-branch: static
+    github-token: $GH_TOKEN
+    on:
+      branch: master
+  - provider: pages
+    skip-cleanup: true
+    local-dir: ./dist/
+    target-branch: gh-pages
+    github-token: $GH_TOKEN
+    on:
+      branch: master
+
