@@ -61,7 +61,7 @@ $flair-color: #0d78f4;
   border-radius: 3px;
   background-color: rgba($flair-color, 0.22);
 
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   color: $flair-color;
 }

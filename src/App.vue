@@ -26,12 +26,9 @@ body {
   margin: 0;
   background-color: darkgrey;
 
-  // Display resume in center of screen.
-  > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  // Keep #app centered.
+  // prettier-ignore
+  > #app { margin: 0 auto; }
 
   // Configure default font styling.
   font-size: 16px;
@@ -46,4 +43,8 @@ body {
     padding: 0;
   }
 }
+
+// Keep resume centered.
+// prettier-ignore
+#app > div { margin: 0 auto; }
 </style>

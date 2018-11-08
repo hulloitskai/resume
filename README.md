@@ -1,6 +1,6 @@
 # resume
 
-_My resume, written in Vue._
+_My resume, written in VueJS._
 
 [![Travis CI][travis-img]][travis]
 
