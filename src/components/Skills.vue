@@ -38,9 +38,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$lang-color: rgb(24, 188, 114);
-$lib-color: rgb(86, 161, 247);
-$tech-color: rgb(210, 142, 238);
+// $lang-color: rgb(24, 188, 114);
+$lib-color: rgb(179, 179, 179);
+// $tech-color: rgb(210, 142, 238);
+
+$lang-color: $lib-color;
+$tech-color: $lib-color;
 
 .section {
   margin-bottom: 8px;
@@ -70,7 +73,7 @@ h2 {
 
   p {
     background-color: rgba($lang-color, 0.22);
-    color: darken($lang-color, 10%);
+    color: darken($lang-color, 30%);
   }
 }
 
@@ -80,7 +83,7 @@ h2 {
 
   p {
     background-color: rgba($lib-color, 0.22);
-    color: darken($lib-color, 15%);
+    color: darken($lib-color, 30%);
   }
 }
 
@@ -90,7 +93,7 @@ h2 {
 
   p {
     background-color: rgba($tech-color, 0.25);
-    color: darken($tech-color, 15%);
+    color: darken($tech-color, 30%);
   }
 }
 </style>

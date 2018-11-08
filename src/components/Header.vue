@@ -8,12 +8,12 @@
     <div class="panel right">
       <p
         class="link" target="_blank" rel="noopener noreferrer"
-        v-for="(link, index) in links"
+        v-for="(link, i) in links"
         :key="link.url"
       >
         <a
           :href="link.url"
-          :style="{ color: generateLinkColor(index) }"
+          :style="{ color: generateLinkColor(i) }"
           target="_blank"
         >
           {{ link.title }}
