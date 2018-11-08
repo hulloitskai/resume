@@ -32,6 +32,6 @@ export default {
 
 .blurb {
   margin-top: 1px;
-  color: #4f4f4f;
+  color: #4d4d4d;
 }
 </style>
