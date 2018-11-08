@@ -1,74 +1,96 @@
 <template>
-  <resume-section title="EXPERIENCE">
-    <div class="item" v-for="(exp, i) in data" :key="i">
-      <h3 class="title">{{ exp.title }}</h3>
-      <h4 class="timestamp">{{ exp.timestamp }}</h4>
-      <ul class="points">
-        <li v-for="(point, j) in points[i]" :key="j" v-html="point" />
-      </ul>
+  <resume-section title="SKILLS">
+    <div class="section langs">
+      <h2>languages</h2>
+      <div class="tags">
+        <p v-for="lang in languages" :key="lang">{{ lang }}</p>
+      </div>
+    </div>
+    <div class="section libs">
+      <h2>libraries</h2>
+      <div class="section tags">
+        <p v-for="lib in libraries" :key="lib">{{ lib }}</p>
+      </div>
+    </div>
+    <div class="section techs">
+      <h2>technologies</h2>
+      <div class="tags">
+        <p v-for="tech in technologies" :key="tech">{{ tech }}</p>
+      </div>
     </div>
   </resume-section>
 </template>
 
 <script>
 import Section from "./Section.vue";
-import emphParse from "@/utils/emphParse.js";
+
+// The default prop "type".
+const propType = { type: Array, default: () => [] };
 
 export default {
   props: {
-    data: { type: Array, default: () => [] }
-  },
-  computed: {
-    points: function() {
-      return this.data.map(({ points }) => points.map(emphParse));
-    }
+    languages: propType,
+    libraries: propType,
+    technologies: propType
   },
   components: { "resume-section": Section }
 };
 </script>
 
 <style lang="scss" scoped>
-// prettier-ignore
-.item { margin-bottom: 25px; }
+$lang-color: rgb(24, 188, 114);
+$lib-color: rgb(86, 161, 247);
+$tech-color: rgb(210, 142, 238);
 
-// prettier-ignore
-h3, h4 { font-family: "Fira Code", "Courier New", Courier, monospace; }
-
-h3.title {
-  color: #585858;
-  font-weight: 600;
-  font-size: 16px;
+.section {
+  margin-bottom: 8px;
 }
 
-h4.timestamp {
-  color: #919191;
-  font-weight: 500;
+h2 {
+  margin-bottom: 2px;
   font-size: 15px;
-  font-style: oblique;
+  color: #585858;
 }
 
-ul.points {
-  margin: 7px 0 20px 0;
-  padding-left: 20px;
+.tags {
+  display: flex;
+  flex-wrap: wrap;
 
-  color: #5e5e5e;
-  font-size: 15.5px;
+  p {
+    margin: 2px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 15px;
+  }
+}
 
-  li {
-    margin-bottom: 5px;
-    list-style-type: none;
+.langs {
+  // prettier-ignore
+  // h2 { color: darken($lang-color, 10%); }
 
-    /deep/ p {
-      display: inline;
+  p {
+    background-color: rgba($lang-color, 0.22);
+    color: darken($lang-color, 10%);
+  }
+}
 
-      // prettier-ignore
-      span.emphasis { color: rgb(0, 0, 0); }
-    }
+.libs {
+  // prettier-ignore
+  // h2 { color: darken($lib-color, 15%); }
 
-    &::before {
-      content: "– ";
-      margin-left: -12px;
-    }
+  p {
+    background-color: rgba($lib-color, 0.22);
+    color: darken($lib-color, 15%);
+  }
+}
+
+.techs {
+  // prettier-ignore
+  // h2 { color: darken($tech-color, 20%); }
+
+  p {
+    background-color: rgba($tech-color, 0.25);
+    color: darken($tech-color, 15%);
   }
 }
 </style>

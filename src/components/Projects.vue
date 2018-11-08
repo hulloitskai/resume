@@ -1,8 +1,14 @@
 <template>
-  <resume-section title="EXPERIENCE">
-    <div class="item" v-for="(exp, i) in data" :key="i">
-      <h3 class="title">{{ exp.title }}</h3>
-      <h4 class="timestamp">{{ exp.timestamp }}</h4>
+  <resume-section title="PROJECTS">
+    <div class="item" v-for="(proj, i) in data" :key="i">
+      <h3 class="name">{{ proj.name }}</h3>
+      <div class="description">
+        <a v-if="proj.link" class="link" :href="proj.link.url" target="_blank">
+          <h4>{{ proj.link.title }}</h4>
+        </a>
+        <h4 v-if="proj.timestamp" class="timestamp">{{ proj.timestamp }}</h4>
+        <h5 v-if="proj.flair" class="flair">{{ proj.flair }}</h5>
+      </div>
       <ul class="points">
         <li v-for="(point, j) in points[i]" :key="j" v-html="point" />
       </ul>
@@ -28,17 +34,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// prettier-ignore
-.item { margin-bottom: 20px; }
+$flair-color: #0d78f4;
 
-.title {
+.name {
   font-weight: 600;
   font-size: 16px;
 }
 
+.description {
+  display: flex;
+  align-items: center;
+}
+
+.link h4,
 .timestamp {
   font-weight: 500;
   font-size: 14px;
+  margin-right: 12px;
+}
+
+// prettier-ignore
+.link { text-decoration: none; }
+
+.flair {
+  padding: 1px 5px;
+  border-radius: 3px;
+  background-color: rgba($flair-color, 0.22);
+
+  font-size: 12px;
+  font-weight: 500;
+  color: $flair-color;
 }
 
 .points {

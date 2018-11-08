@@ -11,7 +11,11 @@
         v-for="(link, index) in links"
         :key="link.url"
       >
-        <a :href="link.url" :style="{ color: generateLinkColor(index) }">
+        <a
+          :href="link.url"
+          :style="{ color: generateLinkColor(index) }"
+          target="_blank"
+        >
           {{ link.title }}
         </a>
       </p>
@@ -36,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-div.header {
+.header {
   height: 160px;
   padding: 0 50px;
   display: flex;
@@ -46,18 +50,19 @@ div.header {
   color: #7a7a7a;
 }
 
-h1.name {
+.name {
   margin-bottom: 5px;
 
-  color: #5d5d5d;
+  letter-spacing: 1px;
   font-weight: bold;
   font-size: 33px;
+  color: #5d5d5d;
 }
 
 // prettier-ignore
-p.blurb { line-height: 115%; }
+.blurb { line-height: 115%; }
 
-div.panel {
+.panel {
   // prettier-ignore
   &.left { width: 330px; }
   // prettier-ignore
@@ -71,7 +76,7 @@ div.panel {
   }
 }
 
-p.link {
+.link {
   margin-bottom: 4px;
   color: inherit;
   font-size: 16px;

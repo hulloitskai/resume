@@ -5,7 +5,11 @@
       <div class="column left">
         <experience :data="experienceData" />
       </div>
-      <div class="column right" />
+      <div class="column right">
+        <skills v-bind="skillsData" />
+        <projects :data="projectsData" />
+        <education :data="educationData" />
+      </div>
     </div>
   </div>
 </template>
@@ -14,6 +18,9 @@
 import _ from "lodash";
 import Header from "@/components/Header.vue";
 import Experience from "@/components/Experience.vue";
+import Skills from "@/components/Skills.vue";
+import Projects from "@/components/Projects.vue";
+import Education from "@/components/Education.vue";
 
 export default {
   props: {
@@ -21,13 +28,28 @@ export default {
   },
   computed: {
     headerData: function() {
-      return _.pick(this.data, ["name", "blurb", "links"]);
+      return _.pick(this.data, ["name", "blurb", "links"]) || {};
     },
     experienceData: function() {
       return this.data.experiences;
+    },
+    skillsData: function() {
+      return this.data.skills;
+    },
+    projectsData: function() {
+      return this.data.projects;
+    },
+    educationData: function() {
+      return this.data.education;
     }
   },
-  components: { "resume-header": Header, Experience }
+  components: {
+    "resume-header": Header,
+    Experience,
+    Skills,
+    Projects,
+    Education
+  }
 };
 </script>
 
@@ -48,16 +70,18 @@ div.content {
 
 div.column {
   padding: 50px;
-  padding-top: 40px;
+  padding-top: 35px;
+  flex: 1;
 
-  &.left {
-    flex: 4;
-    padding-right: 20px;
-  }
+  // prettier-ignore
+  &.left { padding-right: 15px; }
 
   &.right {
-    flex: 3;
-    padding-left: 20px;
+    padding-left: 15px;
+
+    // '>' is the immediate-child selector.
+    // prettier-ignore
+    > div { margin-bottom: 18px; }
   }
 }
 </style>

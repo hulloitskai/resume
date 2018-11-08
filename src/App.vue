@@ -7,15 +7,13 @@
 <script>
 import Resume from "@/Resume.vue";
 
-const { BASE_URL: baseURL } = process.env;
-
 // App contains global styling and functions as a wrapper for the Resume
 // component.
 export default {
   data: () => ({ data: {} }),
   // Fetch JSON data upon creation.
   created: function() {
-    fetch(`${baseURL}data.json`)
+    fetch("data.json")
       .then(res => res.json())
       .then(data => (this.data = data));
   },
@@ -25,12 +23,15 @@ export default {
 
 <style lang="scss">
 body {
-  // Display resume in center of screen.
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 0;
   background-color: darkgrey;
+
+  // Display resume in center of screen.
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   // Configure default font styling.
   font-size: 16px;
