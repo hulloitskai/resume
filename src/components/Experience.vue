@@ -45,7 +45,7 @@ export default {
   margin: 5px 0 20px 0;
   padding-left: 20px;
 
-  color: #4f4f4f;
+  color: #4d4d4d;
   font-size: 15.5px;
 
   li {
