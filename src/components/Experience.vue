@@ -42,14 +42,15 @@ export default {
 }
 
 .points {
-  margin: 5px 0 20px 0;
+  margin: 5px 0 24px 0;
   padding-left: 20px;
 
   color: #4f4f4f;
-  font-size: 15.5px;
+  font-size: 15px;
 
   li {
-    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 7px;
     list-style-type: none;
 
     /deep/ p {

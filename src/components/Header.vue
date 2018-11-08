@@ -30,7 +30,7 @@ export default {
     blurb: { type: String, default: "" },
     links: { type: Array, default: () => [] }
   },
-  data: () => ({ linkColors: ["#18bc72", "#56A1F7", "#D28EEE"] }),
+  data: () => ({ linkColors: ["#18BA72", "#5691F0", "#c063dc"] }),
   methods: {
     generateLinkColor: function(index) {
       return this.linkColors[index % 3];

@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$flair-color: #0d78f4;
+$flair-color: grey;
 
 .name {
   font-weight: 600;
@@ -59,7 +59,7 @@ $flair-color: #0d78f4;
 .flair {
   padding: 1px 5px;
   border-radius: 3px;
-  background-color: rgba($flair-color, 0.22);
+  background-color: #f0f0f0;
 
   font-size: 13px;
   font-weight: 500;
@@ -74,7 +74,8 @@ $flair-color: #0d78f4;
   font-size: 15.5px;
 
   li {
-    margin-bottom: 5px;
+    margin-top: 2px;
+    margin-bottom: 6px;
     list-style-type: none;
 
     /deep/ p {

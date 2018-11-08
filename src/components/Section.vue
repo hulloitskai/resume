@@ -15,7 +15,7 @@ export default {
 
 <style lang="scss" scoped>
 h2.title {
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 
   letter-spacing: 1px;
   font-size: 23px;
@@ -29,7 +29,7 @@ h3, h4, h5 {
   letter-spacing: -0.5px;
 }
 // prettier-ignore
-h3 { color: #585858; }
+h3 { color: #303030; }
 // prettier-ignore
 h4 { color: #909090; }
 </style>

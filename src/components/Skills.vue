@@ -38,13 +38,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// $lang-color: rgb(24, 188, 114);
-$lib-color: rgb(179, 179, 179);
-// $tech-color: rgb(210, 142, 238);
-
-$lang-color: $lib-color;
-$tech-color: $lib-color;
-
 .section {
   margin-bottom: 8px;
 }
@@ -60,40 +53,43 @@ h2 {
   flex-wrap: wrap;
 
   p {
-    margin: 2px;
+    margin: 0 4px 4px 0;
     padding: 2px 6px;
     border-radius: 3px;
     font-size: 15px;
+
+    background-color: #f5f5f5;
+    color: #777777;
   }
 }
 
-.langs {
-  // prettier-ignore
-  // h2 { color: darken($lang-color, 10%); }
+// .langs {
+//   // prettier-ignore
+//   // h2 { color: darken($lang-color, 10%); }
 
-  p {
-    background-color: rgba($lang-color, 0.22);
-    color: darken($lang-color, 30%);
-  }
-}
+//   p {
+//     background-color: rgba($lang-color, 0.22);
+//     color: darken($lang-color, 30%);
+//   }
+// }
 
-.libs {
-  // prettier-ignore
-  // h2 { color: darken($lib-color, 15%); }
+// .libs {
+//   // prettier-ignore
+//   // h2 { color: darken($lib-color, 15%); }
 
-  p {
-    background-color: rgba($lib-color, 0.22);
-    color: darken($lib-color, 30%);
-  }
-}
+//   p {
+//     background-color: rgba($lib-color, 0.22);
+//     color: darken($lib-color, 30%);
+//   }
+// }
 
-.techs {
-  // prettier-ignore
-  // h2 { color: darken($tech-color, 20%); }
+// .techs {
+//   // prettier-ignore
+//   // h2 { color: darken($tech-color, 20%); }
 
-  p {
-    background-color: rgba($tech-color, 0.25);
-    color: darken($tech-color, 30%);
-  }
-}
+//   p {
+//     background-color: rgba($tech-color, 0.25);
+//     color: darken($tech-color, 30%);
+//   }
+// }
 </style>
