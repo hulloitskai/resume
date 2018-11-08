@@ -23,7 +23,7 @@
       "title": "iOS App Developer @ Evichat Inc.",
       "timestamp": "August 2017 ⇒ September 2017",
       "points": [
-        "Designed and programmed Evichat's primary iOS client app in [[Swift 3]], which acted as the client entrypoint for Evichat's services",
+        "Designed and programmed Evichat's primary iOS client app in [[Swift 3]], which acted as the client entrypoint for Evichat's services.",
         "Implemented [[OAuth 1.0 and 2.0]] auth flows to integrate with social services like Gmail, Twitter, and Instagram.",
         "Worked with [[CocoaPods]] to modularize the app into easy-to-maintain networking and UI components, which streamlined the development process."
       ]
@@ -63,7 +63,7 @@
   "education": [
     {
       "name": "University of Waterloo",
-      "blurb": "Candidate for a Bachelor's of Computer Science (BCS).",
+      "blurb": "Candidate for Bachelors of Computer Science (BCS).",
       "timestamp": "2017 ⇒ 2022"
     }
   ],
