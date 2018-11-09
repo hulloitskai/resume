@@ -62,34 +62,4 @@ h2 {
     color: #777777;
   }
 }
-
-// .langs {
-//   // prettier-ignore
-//   // h2 { color: darken($lang-color, 10%); }
-
-//   p {
-//     background-color: rgba($lang-color, 0.22);
-//     color: darken($lang-color, 30%);
-//   }
-// }
-
-// .libs {
-//   // prettier-ignore
-//   // h2 { color: darken($lib-color, 15%); }
-
-//   p {
-//     background-color: rgba($lib-color, 0.22);
-//     color: darken($lib-color, 30%);
-//   }
-// }
-
-// .techs {
-//   // prettier-ignore
-//   // h2 { color: darken($tech-color, 20%); }
-
-//   p {
-//     background-color: rgba($tech-color, 0.25);
-//     color: darken($tech-color, 30%);
-//   }
-// }
 </style>
