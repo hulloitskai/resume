@@ -6,19 +6,18 @@
     </div>
     <div class="panel spacer" />
     <div class="panel right">
-      <p
-        class="link" target="_blank" rel="noopener noreferrer"
+      <a
+        class="link"
         v-for="(link, i) in links"
         :key="link.url"
+        :style="{ color: generateLinkColor(i) }"
+        :href="link.url"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <a
-          :href="link.url"
-          :style="{ color: generateLinkColor(i) }"
-          target="_blank"
-        >
-          {{ link.title }}
-        </a>
-      </p>
+        <p>{{ link.title }}</p>
+        <i :class="link.icon" />
+      </a>
     </div>
   </div>
 </template>
@@ -42,7 +41,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   height: 160px;
-  padding: 0 50px;
+  padding: 0 45px;
   display: flex;
   align-items: center;
 
@@ -56,7 +55,7 @@ export default {
   letter-spacing: 1px;
   font-weight: bold;
   font-size: 33px;
-  color: #5d5d5d;
+  color: #3f3f3f;
 }
 
 // prettier-ignore
@@ -69,19 +68,29 @@ export default {
   &.spacer { flex: 1; }
 
   &.right {
-    width: 250px;
+    width: 275px;
     position: relative;
     top: 7px; // makes it feel more "balanced" with left side
-    text-align: right;
   }
 }
 
 .link {
+  display: flex;
   margin-bottom: 4px;
-  color: inherit;
-  font-size: 16px;
+  align-items: center;
+  justify-content: flex-end;
 
-  // prettier-ignore
-  a { text-decoration: none; }
+  text-decoration: none;
+
+  p {
+    font-size: 16px;
+    color: inherit;
+  }
+
+  i {
+    display: flex;
+    justify-content: center;
+    width: 27px;
+  }
 }
 </style>

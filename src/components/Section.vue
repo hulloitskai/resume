@@ -14,13 +14,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/mixins/_colors.scss";
+
 h2.title {
   margin-bottom: 5px;
 
   letter-spacing: 1px;
   font-size: 23px;
   font-weight: bold;
-  color: #7b8bdb;
+  color: #444444;
 }
 
 // prettier-ignore
@@ -29,7 +31,14 @@ h3, h4, h5 {
   letter-spacing: -0.5px;
 }
 // prettier-ignore
-h3 { color: #303030; }
+h3 { color: #4d4d4d; }
 // prettier-ignore
 h4 { color: #909090; }
+
+// prettier-ignore
+/deep/ span {
+  &.tech { color: $tech-color-dark !important; }
+  &.lib { color: $lib-color-dark !important; }
+  &.lang { color: $lang-color-dark !important; }
+}
 </style>

@@ -71,11 +71,11 @@ $flair-color: grey;
   padding-left: 20px;
 
   color: #4d4d4d;
-  font-size: 15.5px;
+  font-size: 15px;
 
   li {
     margin-top: 2px;
-    margin-bottom: 6px;
+    margin-bottom: 7px;
     list-style-type: none;
 
     /deep/ p {

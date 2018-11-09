@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <resume :data="data" />
-  </div>
+  <div id="app"><resume :data="data" /></div>
 </template>
 
 <script>

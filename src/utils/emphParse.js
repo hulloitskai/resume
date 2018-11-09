@@ -6,23 +6,34 @@
  * @returns {string}
  */
 export default function emphParse(text) {
-  let searchPos = 0;
-  let openIndex = text.indexOf("[[", searchPos);
+  let openIndex = text.indexOf("[[");
 
   while (openIndex !== -1) {
-    const closeIndex = text.indexOf("]]");
-    if (closeIndex === -1) return text;
+    console.log(text);
+
+    const endIndex = text.indexOf("]");
+    if (endIndex === -1) return text;
+
+    let closeIndex = endIndex + 2;
+    let type = "";
+    if (text[endIndex + 1] == "(") {
+      let typeStartIndex = endIndex + 2;
+      let typeEndIndex = text.indexOf(")", typeStartIndex + 1);
+      type = text.substr(typeStartIndex, typeEndIndex - typeStartIndex);
+      closeIndex = typeEndIndex + 2;
+    }
 
     const before = text.substr(0, openIndex);
-    const after = text.substr(closeIndex + 2);
+    const after = text.substr(closeIndex);
 
     const firstCharIndex = openIndex + 2;
     const between = text
-      .substr(firstCharIndex, closeIndex - firstCharIndex)
+      .substr(firstCharIndex, endIndex - firstCharIndex)
       .trim();
 
-    text = `<p>${before}<span class="emphasis">${between}</span>${after}</p>`;
-    openIndex = text.indexOf("[[", searchPos);
+    if (type) type = ` ${type}`;
+    text = `<p>${before}<span class="emphasis${type}">${between}</span>${after}</p>`;
+    openIndex = text.indexOf("[[");
   }
 
   return text;

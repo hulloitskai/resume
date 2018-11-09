@@ -2,15 +2,13 @@
   <div class="resume">
     <resume-header v-bind="headerData" />
     <div class="content">
-      <div class="column left">
-        <experience :data="experienceData" />
-      </div>
+      <div class="column left"><experience :data="experienceData" /></div>
       <div class="column right">
-        <skills v-bind="skillsData" />
-        <projects :data="projectsData" />
+        <skills v-bind="skillsData" /> <projects :data="projectsData" />
         <education :data="educationData" />
       </div>
     </div>
+    <badge :source="badgeData" />
   </div>
 </template>
 
@@ -21,6 +19,7 @@ import Experience from "@/components/Experience.vue";
 import Skills from "@/components/Skills.vue";
 import Projects from "@/components/Projects.vue";
 import Education from "@/components/Education.vue";
+import Badge from "@/components/Badge.vue";
 
 export default {
   props: {
@@ -41,6 +40,9 @@ export default {
     },
     educationData: function() {
       return this.data.education;
+    },
+    badgeData: function() {
+      return this.data.meta.source;
     }
   },
   components: {
@@ -48,13 +50,14 @@ export default {
     Experience,
     Skills,
     Projects,
-    Education
+    Education,
+    Badge
   }
 };
 </script>
 
 <style lang="scss" scoped>
-div.resume {
+.resume {
   width: 8.5in;
   height: 11in;
   display: flex;
@@ -63,14 +66,14 @@ div.resume {
   background-color: white;
 }
 
-div.content {
+.content {
   flex: 1;
   display: flex;
 }
 
-div.column {
-  padding: 50px;
-  padding-top: 35px;
+.column {
+  padding: 45px;
+  padding-top: 33px;
   flex: 1;
 
   // prettier-ignore
@@ -83,5 +86,11 @@ div.column {
     // prettier-ignore
     > div { margin-bottom: 18px; }
   }
+}
+
+.footer-badge {
+  display: absolute;
+  bottom: 0;
+  margin: 0 auto 37px auto;
 }
 </style>
