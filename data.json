@@ -2,11 +2,20 @@
   "name": "Steven Xie",
   "blurb": "I study CS at the University of Waterloo, and I aim to build things that matter.",
   "links": [
-    { "title": "hello@stevenxie.me", "url": "mailto:hello@stevenxie.me" },
-    { "title": "github.com/stevenxie", "url": "https://github.com/stevenxie" },
+    {
+      "title": "hello@stevenxie.me",
+      "url": "mailto:hello@stevenxie.me",
+      "icon": "fas fa-envelope"
+    },
+    {
+      "title": "github.com/stevenxie",
+      "url": "https://github.com/stevenxie",
+      "icon": "fab fa-github"
+    },
     {
       "title": "linkedin.com/in/steven-s-xie",
-      "url": "https://www.linkedin.com/in/steven-s-xie"
+      "url": "https://www.linkedin.com/in/steven-s-xie",
+      "icon": "fab fa-linkedin"
     }
   ],
   "experiences": [
@@ -14,8 +23,8 @@
       "title": "Full-stack Developer @ ConsenSys",
       "timestamp": "April 2018 ⇒ August 2018",
       "points": [
-        "Developed a team management webapp using [[React]], [[MongoDB]], and [[Neo4J]], which aims to support the operation of decentralized organizations like ConsenSys.",
-        "Solved problems related to relationship-focused data using [[graph databases]], and architecting scalable data-heavy applications using [[Redux]] and [[websockets]].",
+        "Developed a team management webapp using [[React](lib)], [[MongoDB](tech)], and [[Neo4J](tech)], which aims to support the operation of decentralized organizations like ConsenSys.",
+        "Solved problems related to relationship-focused data using [[graph databases](tech)], and architecting scalable data-heavy applications using [[Redux](lib)] and [[websockets](tech)].",
         "Gained experience working in a fast-paced startup environment, and learned about the importance of constant feedback when working in a team."
       ]
     },
@@ -23,17 +32,21 @@
       "title": "iOS App Developer @ Evichat Inc.",
       "timestamp": "August 2017 ⇒ September 2017",
       "points": [
-        "Designed and programmed Evichat's primary iOS client app in [[Swift 3]], which acted as the client entrypoint for Evichat's services.",
-        "Implemented [[OAuth 1.0 and 2.0]] auth flows to integrate with social services like Gmail, Twitter, and Instagram.",
-        "Improved code maintainability by modularizing the app into separate networking and UI components using [[CoacoaPods]]."
+        "Designed and programmed Evichat's primary iOS client app in [[Swift 3](lang)], which acted as the client entrypoint for Evichat's services.",
+        "Implemented [[OAuth 1.0 and 2.0](tech)] auth flows to integrate with social services like Gmail, Twitter, and Instagram.",
+        "Improved code maintainability by modularizing the app into separate networking and UI components using [[CoacoaPods](tech)]."
       ]
     },
     {
       "title": "Software Developer @ buildABILITY",
       "timestamp": "July 2017 ⇒ August 2017",
+      "link": {
+        "title": "github.com/stevenxie/buildability-certifier",
+        "url": "https://github.com/stevenxie/buildability-certifier"
+      },
       "points": [
-        "Created a cross-platform automated certificate creator and sender using [[Electron]] and [[Node.js]] to automate a manual pdf-creation and emailing procedure.",
-        "Reduced a 90-minute manual procedure into a 30-second automated one (per batch of 100 clients), dramatically increasing operational efficiency.",
+        "Created a cross-platform certificate creator and sender using [[Electron](lib)] and [[Node.js](tech)] to automate a PDF-creation and emailing procedure.",
+        "Transformed a 90-minute manual procedure into a 30-second automated one (per batch of 100 clients), dramatically increasing operational efficiency.",
         "Integrated with external APIs to read and write to CSVs, produce and rasterize PDFs, and send emails."
       ]
     }
@@ -46,7 +59,7 @@
         "url": "https://github.com/stevenxie/express-starter"
       },
       "points": [
-        "Developed a starter kit for [[Express]], [[Typescript]], and [[Docker]] to bootstrap webapp development for myself and for friends wanting to start with web development, but who were struggling with the setup.",
+        "Developed a starter kit for [[Express](lib)], [[Typescript](lang)], and [[Docker](tech)] to bootstrap webapp development for myself and for friends wanting to start with web development, but who were struggling with the setup.",
         "Documented the starter kit with beginner-friendly explanations on how Express routes are configured, and about the Docker container build process."
       ]
     },
@@ -55,8 +68,8 @@
       "timestamp": "09/2018 ⇒ Present",
       "flair": "a UW Blueprint project",
       "points": [
-        "Creating a game-based learning system in [[Unity]] to help people with autism spectrum disorder learn everyday life skills.",
-        "Developing a dashboard / analysis system in [[React]] and [[Python (Flask)]] to allow parents and teachers to track player progress and discover insights."
+        "Creating a game-based learning system in [[Unity](tech)] to help people with autism spectrum disorder learn everyday life skills.",
+        "Developing a dashboard / analysis system in [[React](lib)] and [[Python](lang)] [[(Flask)](lib)] to allow parents and teachers to track player progress and discover insights."
       ]
     }
   ],
@@ -81,7 +94,7 @@
       "Python",
       "Rust"
     ],
-    "libraries": ["React", "React Native", "Express", "Vue"],
+    "libraries": ["React", "React Native", "Redux", "Express", "Vue"],
     "technologies": [
       "Docker",
       "Docker Swarm",
@@ -105,5 +118,11 @@
         "Designed a dementia-friendly interface on [[Sketch]], and prototyped with [[React Native]] and [[Expo]]."
       ]
     }
-  ]
+  ],
+  "meta": {
+    "source": {
+      "title": "github.com/stevenxie/resume",
+      "url": "https://github.com/stevenxie/resume"
+    }
+  }
 }
