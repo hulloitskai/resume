@@ -1,10 +1,8 @@
 <template>
-  <div class="footer-badge">
+  <a class="footer-badge" :href="source.url">
     <i class="fas fa-code" />
-    <a :href="source.url"
-      ><p>{{ source.title }}</p></a
-    >
-  </div>
+    <p>{{ source.title }}</p>
+  </a>
 </template>
 
 <script>

@@ -91,6 +91,6 @@ export default {
 .footer-badge {
   display: absolute;
   bottom: 0;
-  margin: 0 auto 37px auto;
+  margin: 0 auto 35px auto;
 }
 </style>
