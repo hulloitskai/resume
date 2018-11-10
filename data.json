@@ -5,7 +5,8 @@
     {
       "title": "hello@stevenxie.me",
       "url": "mailto:hello@stevenxie.me",
-      "icon": "fas fa-envelope"
+      "icon": "fas fa-envelope",
+      "newtab": false
     },
     {
       "title": "github.com/stevenxie",
