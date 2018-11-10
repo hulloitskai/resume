@@ -12,7 +12,7 @@
         :key="link.url"
         :style="{ color: generateLinkColor(i) }"
         :href="link.url"
-        target="_blank"
+        :target="link.newtab !== false && '_blank'"
         rel="noopener noreferrer"
       >
         <p>{{ link.title }}</p>
