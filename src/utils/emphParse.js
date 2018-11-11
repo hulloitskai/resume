@@ -9,8 +9,6 @@ export default function emphParse(text) {
   let openIndex = text.indexOf("[[");
 
   while (openIndex !== -1) {
-    console.log(text);
-
     const endIndex = text.indexOf("]");
     if (endIndex === -1) return text;
 
