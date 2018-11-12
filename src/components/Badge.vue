@@ -1,7 +1,7 @@
 <template>
   <a class="footer-badge" :href="source.url">
-    <i class="fas fa-code" />
-    <p>{{ source.title }}</p>
+    <i class="fas fa-hammer" />
+    <p>built with <span class="emphasis">VueJS</span></p>
   </a>
 </template>
 
@@ -14,15 +14,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.footer-badge {
-  padding: 5px 6px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  font-size: 15px;
+$color: #888888;
 
-  background-color: #eeeeee;
-  color: #707070;
+.footer-badge {
+  padding: 0.4em 0.5em;
+  border-radius: 0.3em;
+  display: flex;
+  align-items: center;
+
+  font-size: 10pt;
+  background-color: #f0f0f0;
+  color: $color;
+
+  // prettier-ignore
+  .emphasis { font-weight: 600; }
 }
 
 a {
@@ -31,7 +36,7 @@ a {
 }
 
 i {
-  margin-right: 6px;
-  color: #888888;
+  margin-right: 0.5em;
+  color: lighten($color, 5%);
 }
 </style>

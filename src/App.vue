@@ -29,7 +29,7 @@ body {
   > #app { margin: 0 auto; }
 
   // Configure default font styling.
-  font-size: 16px;
+  font-size: 11pt;
   font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

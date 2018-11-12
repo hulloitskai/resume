@@ -34,11 +34,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$flair-color: grey;
-
 .name {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 12.25pt;
+  margin-bottom: 0.15em;
 }
 
 .description {
@@ -46,36 +45,36 @@ $flair-color: grey;
   align-items: center;
 }
 
-.link h4,
-.timestamp {
+// prettier-ignore
+.link h4, .timestamp {
   font-weight: 500;
-  font-size: 14px;
-  margin-right: 12px;
+  font-size: 10.5pt;
+  margin-right: .7em;
 }
 
 // prettier-ignore
 .link { text-decoration: none; }
 
 .flair {
-  padding: 1px 5px;
-  border-radius: 3px;
-  background-color: #f0f0f0;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25em;
+  background-color: #f1f1f1;
 
-  font-size: 13px;
+  font-size: 9.5pt;
   font-weight: 500;
-  color: $flair-color;
+  color: grey;
 }
 
 .points {
-  margin: 5px 0 20px 0;
-  padding-left: 20px;
+  margin: 0.2em 0 1em 0;
+  padding-left: 1.5em;
 
   color: #4d4d4d;
-  font-size: 15px;
+  font-size: 11.25pt;
 
   li {
-    margin-top: 2px;
-    margin-bottom: 7px;
+    margin-top: 0.3em;
+    margin-bottom: 0.4em;
     list-style-type: none;
 
     /deep/ p {
@@ -87,7 +86,7 @@ $flair-color: grey;
 
     &::before {
       content: "– ";
-      margin-left: -16px;
+      margin-left: -1em;
     }
   }
 }

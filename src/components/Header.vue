@@ -41,7 +41,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   height: 160px;
-  padding: 0 45px;
+  padding: 0 3em;
   display: flex;
   align-items: center;
 
@@ -50,47 +50,49 @@ export default {
 }
 
 .name {
-  margin-bottom: 5px;
+  margin-bottom: 0.2em;
 
   letter-spacing: 1px;
   font-weight: bold;
-  font-size: 33px;
+  font-size: 23pt;
   color: #3f3f3f;
 }
 
-// prettier-ignore
-.blurb { line-height: 115%; }
+.blurb {
+  font-size: 11.5pt;
+  line-height: 115%;
+}
 
 .panel {
   // prettier-ignore
-  &.left { width: 330px; }
+  &.left { width: 22em; }
   // prettier-ignore
   &.spacer { flex: 1; }
 
   &.right {
-    width: 275px;
+    width: 22em;
     position: relative;
-    top: 7px; // makes it feel more "balanced" with left side
+    top: 0.5em; // makes it feel more "balanced" with left side
   }
 }
 
 .link {
   display: flex;
-  margin-bottom: 4px;
+  margin-bottom: 0.35em;
   align-items: center;
   justify-content: flex-end;
 
   text-decoration: none;
 
   p {
-    font-size: 16px;
+    font-size: 11.5pt;
     color: inherit;
   }
 
   i {
     display: flex;
     justify-content: center;
-    width: 27px;
+    width: 17pt;
   }
 }
 </style>

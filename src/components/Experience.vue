@@ -32,11 +32,11 @@ export default {
 
 <style lang="scss" scoped>
 // prettier-ignore
-.item { margin-bottom: 20px; }
+.item { margin-bottom: 1.35em; }
 
 .title {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 12pt;
 }
 
 a {
@@ -46,28 +46,29 @@ a {
 
 h4 {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 10.5pt;
 
   &.link {
-    padding: 1px 5px;
-    border-radius: 3px;
+    padding: 0.2em 0.4em;
+    margin-bottom: 0.3em;
+    border-radius: 0.25em;
 
-    font-size: 13px;
-    background-color: #f0f0f0;
+    font-size: 9.5pt;
+    background-color: #f1f1f1;
     color: grey;
   }
 }
 
 .points {
-  margin: 5px 0 20px 0;
-  padding-left: 20px;
+  margin: 0.1em 0 1em 0;
+  padding-left: 1.5em;
 
   color: #4d4d4d;
-  font-size: 15px;
+  font-size: 11.25pt;
 
   li {
-    margin-top: 5px;
-    margin-bottom: 7px;
+    margin-top: 0.3em;
+    margin-bottom: 0.4em;
     list-style-type: none;
 
     /deep/ p {
@@ -79,7 +80,7 @@ h4 {
 
     &::before {
       content: "– ";
-      margin-left: -16px;
+      margin-left: -1em;
     }
   }
 }

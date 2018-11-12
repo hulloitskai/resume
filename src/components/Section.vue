@@ -20,7 +20,7 @@ h2.title {
   margin-bottom: 5px;
 
   letter-spacing: 1px;
-  font-size: 23px;
+  font-size: 17pt;
   font-weight: bold;
   color: #444444;
 }
@@ -30,6 +30,7 @@ h3, h4, h5 {
   font-family: "Source Code Pro", "Courier New", Courier, monospace;
   letter-spacing: -0.5px;
 }
+
 // prettier-ignore
 h3 { color: #4d4d4d; }
 // prettier-ignore

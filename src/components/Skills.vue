@@ -41,11 +41,11 @@ export default {
 @import "@/mixins/_colors.scss";
 
 // prettier-ignore
-.section { margin-bottom: 8px; }
+.section { margin-bottom: .5em; }
 
 h2 {
-  margin-bottom: 2px;
-  font-size: 15px;
+  margin-bottom: 0.15em;
+  font-size: 11.25pt;
   color: #606060;
 }
 
@@ -54,10 +54,10 @@ h2 {
   flex-wrap: wrap;
 
   p {
-    margin: 0 4px 4px 0;
-    padding: 2px 6px;
-    border-radius: 3px;
-    font-size: 15px;
+    margin: 0 0.25em 0.25em 0;
+    padding: 0.16em 0.4em;
+    border-radius: 0.25em;
+    font-size: 11.25pt;
   }
 }
 

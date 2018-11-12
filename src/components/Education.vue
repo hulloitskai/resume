@@ -22,17 +22,17 @@ export default {
 <style lang="scss" scoped>
 .name {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 12pt;
 }
 
 .timestamp {
   font-weight: 500;
-  font-size: 13px;
+  font-size: 10pt;
 }
 
 .blurb {
-  margin-top: 1px;
-  font-size: 15px;
+  margin-top: 0.15em;
+  font-size: 11.25pt;
   color: #4d4d4d;
 }
 </style>

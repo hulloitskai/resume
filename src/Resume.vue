@@ -72,25 +72,25 @@ export default {
 }
 
 .column {
-  padding: 45px;
-  padding-top: 33px;
+  padding: 3em;
+  padding-top: 2.2em;
   flex: 1;
 
   // prettier-ignore
-  &.left { padding-right: 15px; }
+  &.left { padding-right: .8em; }
 
   &.right {
-    padding-left: 15px;
+    padding-left: 0.8em;
 
     // '>' is the immediate-child selector.
     // prettier-ignore
-    > div { margin-bottom: 18px; }
+    > div { margin-bottom: 1.35em }
   }
 }
 
 .footer-badge {
   display: absolute;
   bottom: 0;
-  margin: 0 auto 35px auto;
+  margin: 0 auto 3em auto;
 }
 </style>
