@@ -1,7 +1,7 @@
 <template>
   <a class="footer-badge" :href="source.url">
-    <i class="fas fa-hammer" />
-    <p>built with <span class="emphasis">VueJS</span></p>
+    <i class="fas fa-code" />
+    <p>{{ source.title }}</p>
   </a>
 </template>
 
@@ -37,6 +37,6 @@ a {
 
 i {
   margin-right: 0.5em;
-  color: lighten($color, 5%);
+  color: lighten($color, 7%);
 }
 </style>

@@ -88,9 +88,6 @@ export default {
   }
 }
 
-.footer-badge {
-  display: absolute;
-  bottom: 0;
-  margin: 0 auto 3em auto;
-}
+// prettier-ignore
+.footer-badge { margin: 0 auto 3em auto; }
 </style>
