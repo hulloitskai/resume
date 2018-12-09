@@ -5,5 +5,8 @@
   "tabWidth": 2,
   "bracketSpacing": true,
   "printWidth": 80,
-  "proseWrap": "preserve"
+  "proseWrap": "preserve",
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "trailingComma": "es5"
 }

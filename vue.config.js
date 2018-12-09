@@ -1,8 +1,10 @@
+const { NODE_ENV: env } = process.env;
+
 module.exports = {
-  baseUrl: "/resume/",
+  baseUrl: env === "development" ? undefined : "/resume/",
   configureWebpack: {
     resolve: {
-      alias: { vue$: "vue/dist/vue.runtime.esm.js" }
-    }
-  }
+      alias: { vue$: "vue/dist/vue.runtime.esm.js" },
+    },
+  },
 };

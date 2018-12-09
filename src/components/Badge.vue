@@ -8,8 +8,8 @@
 <script>
 export default {
   props: {
-    source: { type: String, default: "" }
-  }
+    source: { type: Object, default: () => ({}) },
+  },
 };
 </script>
 

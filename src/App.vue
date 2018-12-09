@@ -15,7 +15,7 @@ export default {
       .then(res => res.json())
       .then(data => (this.data = data));
   },
-  components: { Resume }
+  components: { Resume },
 };
 </script>
 

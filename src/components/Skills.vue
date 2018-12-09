@@ -31,9 +31,9 @@ export default {
   props: {
     languages: propType,
     libraries: propType,
-    technologies: propType
+    technologies: propType,
   },
-  components: { "resume-section": Section }
+  components: { "resume-section": Section },
 };
 </script>
 

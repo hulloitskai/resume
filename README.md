@@ -8,7 +8,7 @@ _My resume, written in VueJS._
 
 - **GitHub Pages deployment:** https://stevenxie.github.io/resume/
 - **JSON data:** https://stevenxie.github.io/resume/data.json
-- **PDF download:** [grab latest release!](https://github.com/stevenxie/resume/releases)
+- **PDF download:** [grab the latest release!](https://github.com/stevenxie/resume/releases)
 
 ## Motivation
 

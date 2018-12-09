@@ -13,9 +13,9 @@ import Section from "./Section.vue";
 
 export default {
   props: {
-    data: { type: Array, default: () => [] }
+    data: { type: Array, default: () => [] },
   },
-  components: { "resume-section": Section }
+  components: { "resume-section": Section },
 };
 </script>
 

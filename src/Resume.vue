@@ -23,7 +23,7 @@ import Badge from "@/components/Badge.vue";
 
 export default {
   props: {
-    data: { type: Object, required: true }
+    data: { type: Object, required: true },
   },
   computed: {
     headerData: function() {
@@ -42,8 +42,9 @@ export default {
       return this.data.education;
     },
     badgeData: function() {
-      return this.data.meta.source;
-    }
+      const { meta } = this.data;
+      return meta ? meta.source : undefined;
+    },
   },
   components: {
     "resume-header": Header,
@@ -51,8 +52,8 @@ export default {
     Skills,
     Projects,
     Education,
-    Badge
-  }
+    Badge,
+  },
 };
 </script>
 

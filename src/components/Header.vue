@@ -27,14 +27,14 @@ export default {
   props: {
     name: { type: String, default: "" },
     blurb: { type: String, default: "" },
-    links: { type: Array, default: () => [] }
+    links: { type: Array, default: () => [] },
   },
   data: () => ({ linkColors: ["#18BA72", "#5691F0", "#c063dc"] }),
   methods: {
     generateLinkColor: function(index) {
       return this.linkColors[index % 3];
-    }
-  }
+    },
+  },
 };
 </script>
 
