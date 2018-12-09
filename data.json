@@ -67,7 +67,10 @@
     {
       "name": "Elevate (Team Project)",
       "timestamp": "09/2018 ⇒ Present",
-      "flair": "a UW Blueprint project",
+      "flair": {
+        "title": "a UW Blueprint project",
+        "url": "https://uwblueprint.org"
+      },
       "points": [
         "Creating a game-based learning system in [[Unity](tech)] to help people with autism spectrum disorder learn everyday life skills.",
         "Developing a dashboard / analysis system in [[React](lib)] and [[Python](lang)] [[(Flask)](lib)] to allow parents and teachers to track player progress and discover insights."
