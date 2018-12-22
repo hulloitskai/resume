@@ -4,7 +4,8 @@
     <div class="content">
       <div class="column left"><experience :data="experienceData" /></div>
       <div class="column right">
-        <skills v-bind="skillsData" /> <projects :data="projectsData" />
+        <skills v-bind="skillsData" />
+        <projects :data="projectsData" />
         <education :data="educationData" />
       </div>
     </div>
