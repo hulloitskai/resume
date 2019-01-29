@@ -30,9 +30,9 @@ export default function emphParse(text) {
       .trim();
 
     if (type) type = ` ${type}`;
-    text = `<p>${before}<span class="emphasis${type}">${between}</span>${after}</p>`;
+    text = `${before}<span class="emphasis${type}">${between}</span>${after}`;
     openIndex = text.indexOf("[[");
   }
 
-  return text;
+  return `<p>${text}</p>`;
 }

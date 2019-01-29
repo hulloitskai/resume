@@ -1,40 +1,42 @@
-language: node_js
-node_js: "10"
+language: bash
 
-git:
-  depth: 3
+os:
+  - linux
+services: docker
 
 env:
+  ## Required external variables:
+  ##   - DOCKER_USER, DOCKER_PASS
+  ##   - GH_TOKEN, GH_KUBECONFIG_PATH
   global:
-    - secure: "GaHBYQ2Iof00MoFtYrS+8r0nOuH38V8sDu2xWHAkIrhycD6gOj19cdPLfh7xQyus6sMHw2SNF/dJY9RNaKayr3GbSeb7V4SEOBndBBtNwnf3vz8dbMYeWNhOfg0+gRtTSKt/Fmjs5/0DQFb5+06GvWELGmJ+YuJnfxhMZyq1eDJXUdGbTxoFiqi+o+wUF8ztQbgWkuk75UBnPfcwx+66jbqemCsCJFh4tzzSnkopwIxjHchJrXHWOKHo6kXkNWeIEAlI/LNCdp0HAwXIqa0FqgHPlqiaD9n2Ne7GXuzXx2VMEJQf/wK4dx8KsgVJMoxU95s4pu+gtXpuobymqayW2q99ZcYxVDBHd1Jh4QEw/VbpBVUuWMB92hTMlYzdQvsx+YpBg7rlov2+MfJkjHdm5DSuO/9X+GGujs/n9GweonO4TCO7ZNYg6Q4oQdZfeHlsyEM17bIHMbfvUarRDd3dXyOMG2LGtNT5g6DnOeLvsYwzfZ14XuoOOsKR7WGyVHtZradCYIwKSYNWF9IBVdOVPCMl9A95OXodtvVKQ/6tRmEHtZo2gjRJf4+VuidnWQ4sO4tF2Vd6lNRFOTg8FhV6OwKBJx3ZTL5g/ccF6cb0lHGIPKW6P9odbEIxTKQFGSdZe1AQ4IC0hwKa5B2EiwdChKRhkE/V15MAP5Fp3Ji6rBI="
+    - DEPLOYMENTS="resume"
 
-cache:
-  yarn: true
-  directories:
-    - node_modules
+# Install external tools.
+before_install:
+  - export BINPATH=/opt/bin
+  - export PATH=$BINPATH:$PATH
+  - ./scripts/tools.sh
+  - git fetch --tags
 
 ## Install dependencies.
-install: yarn install
+install: make ci-install
 
-## Run build script.
-script: yarn build
+## Run tests.
+script: make ci-test
 
-## Deploy to branch "static".
+## Deploy to Docker Hub and Kubernetes.
 deploy:
-  - provider: pages
-    skip-cleanup: true
-    keep-history: true
-    local-dir: ./dist/
-    target-branch: static
-    github-token: $GH_TOKEN
-    on:
-      branch: master
-  - provider: pages
-    skip-cleanup: true
-    keep-history: true
-    local-dir: ./dist/
-    target-branch: gh-pages
-    github-token: $GH_TOKEN
-    on:
-      branch: master
+  provider: script
+  script: ./scripts/deploy.sh
+  skip-cleanup: true
+  on:
+    all_branches: true
 
+# ## Upload code coverage results.
+# after_success:
+#   - bash <(curl -s https://codecov.io/bash)
+
+cache:
+  directories:
+    ## Preserve external tools.
+    - $BINPATH

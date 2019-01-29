@@ -1,0 +1,17 @@
+## This docker-compose config file is used to define test variations of the
+## images in this repository.
+
+version: "3.4"
+
+services:
+  resume_test:
+    image: "stevenxie/resume:${VERSION}"
+    build:
+      context: .
+      args:
+        BUILD_VERSION: "${VERSION}"
+      cache_from:
+        - stevenxie/resume:latest
+        - nginx:1-alpine
+    container_name: resume_test
+    command: ["nginx", "-t"]

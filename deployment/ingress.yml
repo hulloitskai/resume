@@ -1,0 +1,44 @@
+---
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+
+metadata:
+  name: resume
+  namespace: default
+  annotations:
+    ingress.kubernetes.io/custom-response-headers: X-Service:resume
+    traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
+
+spec:
+  rules:
+    - host: stevenxie.me
+      http:
+        paths:
+          - path: /resume/
+            backend:
+              serviceName: resume
+              servicePort: http
+
+---
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+
+metadata:
+  name: resume-trailing-slash-redir
+  namespace: default
+  annotations:
+    traefik.ingress.kubernetes.io/redirect-regex: https://stevenxie.me/resume([\\?#].*)?$
+    traefik.ingress.kubernetes.io/redirect-replacement: https://stevenxie.me/resume/$1
+    traefik.ingress.kubernetes.io/redirect-permanent: "true"
+
+spec:
+  rules:
+    - host: stevenxie.me
+      http:
+        paths:
+          - path: /resume
+            backend:
+              serviceName: traefik
+              servicePort: http

@@ -1,0 +1,44 @@
+## [Repository]
+jsconfig.json
+
+
+## [Node]
+/dist/
+/node_modules/
+
+
+## [Git]
+.gitignore
+
+## git-secret:
+.gitsecret/
+*.secret
+
+
+## [Docker]
+.dockerignore
+
+
+## [Miscellaneous]
+.editorconfig
+README.md
+
+
+## [System Files]
+## macOS:
+.DS_Store
+.DS_Store?
+*.swp
+
+## Windows:
+Thumbs.db
+
+## VSCode (keeping workspace configurations):
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+#!.vscode/launch.json
+!.vscode/extensions.json
+
+## IntelliJ
+.idea/

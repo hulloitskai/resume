@@ -3,11 +3,12 @@
 _My resume, written in VueJS._
 
 [![Travis CI][travis-img]][travis]
+[![Code Style: Prettier][prettier-img]][prettier]
 
 ## Access
 
-- **GitHub Pages deployment:** https://stevenxie.github.io/resume/
-- **JSON data:** https://stevenxie.github.io/resume/data.json
+- **Deployment:** https://stevenxie.me/resume/
+- **JSON data:** https://stevenxie.me/resume/data.json
 - **PDF download:** [grab the latest release!](https://github.com/stevenxie/resume/releases)
 
 ## Motivation
@@ -40,3 +41,5 @@ yarn run lint  # lints and fixes files
 
 [travis]: https://travis-ci.com/stevenxie/resume
 [travis-img]: https://travis-ci.com/stevenxie/resume.svg?branch=master
+[prettier]: https://github.com/prettier/prettier
+[prettier-img]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
