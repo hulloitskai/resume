@@ -32,7 +32,7 @@ LABEL org.label-schema.version="$BUILD_VERSION"
 
 ## Copy frontend, and config files:
 COPY --from=builder /build/dist/ /usr/share/nginx/html/
-COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./build/nginx.conf /etc/nginx/conf.d/default.conf
 
 ## Configure default nginx variables.
 ENV NGINX_SERVER_NAME="default_server" NGINX_CONFIG="html"

@@ -21,15 +21,4 @@ if [ ! -x ${BINPATH}/docker-compose ]; then
 fi
 echo "docker-compose: $(docker-compose version)"
 
-## Install kubectl.
-if ! command -v kubectl > /dev/null; then
-  echo "Installing kubectl..."
-  VERSION="$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)"
-  curl -LO "https://storage.googleapis.com/kubernetes-release/release/${VERSION}/bin/linux/amd64/kubectl"
-  chmod +x ./kubectl
-  mv kubectl ${BINPATH}/kubectl
-  echo done
-fi
-echo "kubectl: $(kubectl version --client)"
-
 set +e
