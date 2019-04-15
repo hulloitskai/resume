@@ -1,0 +1,13 @@
+apiVersion: v1
+version: 0.1.0
+
+name: resume
+appVersion: "1.2.0"
+description: My resume, written in VueJS.
+
+home: https://github.com/stevenxie/resume
+sources: ["https://github.com/stevenxie/resume"]
+
+maintainers:
+  - name: Steven Xie
+    email: dev@stevenxie.me

@@ -1,0 +1,28 @@
+{{- $name := include "resume.name" . -}}
+{{- $service := .Values.service -}}
+
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: {{ include "resume.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ $name }}
+    helm.sh/chart: {{ include "resume.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+  {{- with $service.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+
+
+spec:
+  type: {{ $service.type }}
+  ports:
+    - name: http
+      protocol: TCP
+      port: {{ $service.port }}
+  selector:
+    app.kubernetes.io/name: {{ $name }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
